@@ -208,7 +208,7 @@ def save_results(config, data):
                         first_name VARCHAR(50) NOT NULL,
                         last_name VARCHAR(70) NOT NULL,
                         job_title VARCHAR(255) NOT NULL,
-                        email VARCHAR(100),
+                        email VARCHAR(100) NOT NULL,
                         url VARCHAR(255) NOT NULL)""")
     prepared_data = [tuple(item.values()) for item in data]
     cursor.executemany(("INSERT INTO named_entities (first_name, last_name, job_title, email, url) "
